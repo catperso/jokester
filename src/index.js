@@ -5,6 +5,7 @@ import './css/styles.css';
 import BobRossService from "./js/exchangerate.js";
 import DadService from './js/dad-joke-service';
 import ProgrammingService from "./js/programming-service";
+import { assertThisExpression } from '@babel/types';
 
 
 function bobRoss(input) {
@@ -30,7 +31,68 @@ function bobRoss(input) {
         }
         const theJoke = bobResponse.response[0].quote;
         displayJoke(theJoke);
+      })
+      .catch(function(error) {
+        displayErrors(error.message);
       });
+  }
+}
+
+function programming(input) {
+  if (input) {
+    ProgrammingService.getSearchJoke(input)
+    .then(function(programmingResponse) {
+      if(programmingResponse instanceof Error) {
+        throw Error (`Programming joke API error: ${programmingResponse.message}`);
+      }
+      const programmingJoke = programmingResponse.joke;
+      displayJoke(programmingJoke);
+    })
+    .catch(function(error) {
+      displayErrors(error.message);
+    });
+  } else {
+    ProgrammingService.getRandomJoke()
+      .then(function(programmingResponse) {
+        if (programmingResponse instanceof Error) {
+          throw Error(`Prgramming joke API error: ${programmingResponse.message}`);
+        }
+        const programmingJoke = programmingJoke.joke;
+        displayJoke(programmingJoke);
+      })
+      .catch(function(error) {
+        displayErrors(error.message);
+      });
+  }
+}
+
+function dadJoke(input) {
+  if (input) {
+    DadService.getSearchJoke(input)
+    .then(function(dadResponse) {
+      if(dadResponse instanceof Error) {
+        throw Error (`Dad Joke API error: ${dadResponse.message}`);
+      }
+      let randomDad = dadResponse.results.length - 1;
+      let dadChoice = Math.floor(Math.random() * randomDad);
+      const dadJoke = dadResponse.results[dadChoice].joke;
+      displayJoke(dadJoke);
+    })
+    .catch(function(error) {
+      displayErrors(error.message);
+    });
+  } else {
+    DadService.getRandomJoke()
+    .then(function(dadResponse) {
+      if (dadResponse instanceof Error) {
+        throw Error(`Dad Joke API error: ${dadResponse.message}`);
+      }
+      const dadJoke = dadResponse.joke;
+      displayJoke(dadJoke);
+    })
+    .catch(function(error) {
+      displayErrors(error.message);
+    });
   }
 }
 
