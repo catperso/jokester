@@ -12,8 +12,8 @@ export default class BobRossService {
     }); 
   }
 
-  static getBobRossSearch(userInput) {
-    return fetch (`https://api.bobross.dev/api/search/${userInput}`)
+  static getBobRossSearch(input) {
+    return fetch (`https://api.bobross.dev/api/search/${input}`)
     .then (function(response) {
       if (!response.ok) {
         throw Error (response.statusText);
