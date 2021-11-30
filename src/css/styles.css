@@ -1,9 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
 .jumbotron {
-  margin-top: auto;
+  margin-top: 25px;
   padding-top: 30px;
   padding-bottom: 30px;
   background-image: url("/src/assets/img/board.png");
 }
+
+#bobbtn, #bobbtn2, #dadbtn, #dadbtn2, #probtn, #probtn2, #simpbtn {
+  color: rgb(0, 195, 255);
+}
+
+.card {
+  margin-top: 50px;
+  margin-left: 510px;
+  margin-right: 510px;
+  margin-bottom: 100px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: gold;
+  border-radius: 250px;
+  text-align: center;
+} 
 
 p {
   text-align: center;
@@ -69,13 +87,6 @@ h3 {
 	clear: both;
 }
 
-a {
-  color: rgb(255, 255, 255);
-  text-decoration: none;
-  outline: none;
-}
-
-/*Fun begins*/
 .tab_container {
 	width: 90%;
 	margin: 0 auto;
@@ -133,7 +144,7 @@ label {
 }
 
 .tab_container [id^="tab"]:checked + label .fa {
-  color: #ff0000;
+  color: #ffffff;
 }
 
 label .fa {
@@ -152,22 +163,21 @@ label .fa {
   }
 }
 
-/*Content Animation*/
 @keyframes fadeInScale {
   0% {
-  	transform: scale(0.9);
-  	opacity: 0;
+    transform: scale(0.9);
+    opacity: 0;
   }
   
   100% {
-  	transform: scale(1);
-  	opacity: 1;
+    transform: scale(1);
+    opacity: 1;
   }
 }
 
 .no_wrap {
   text-align:center;
-  color: #03e9f4;
+  color: #ffffff;
 }
 .link {
   text-align:center;
@@ -179,126 +189,128 @@ label .fa {
 }
 
 *{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 body{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background: #000000;
-  font-family: 'Raleway', sans-serif;
-  font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(0, 0, 0);
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    color:rgb(0, 247, 255);
 }
 button{
-  position: relative;
-  display: inline-block;
-  padding: 25px 30px;
-  margin: 40px 0;
-  color: #ffffff;
-  text-decoration: none;
-  text-transform: uppercase;
-  transition: 1s;
-  letter-spacing: 4px;
-  overflow: hidden;
-  margin-right: 50px;
+    position: relative;
+    display: inline-block;
+    padding: 25px 30px;
+    margin: 40px 0;
+    
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 1s;
+    letter-spacing: 4px;
+    overflow: hidden;
+    margin-right: 50px;
+    
 }
-
 button:hover{
-  background: #ffffff;
-  color: #91ff00;
-  box-shadow: 0 0 5px #03e9f4,
-              0 0 25px #03e9f4,
-              0 0 50px #03e9f4,
-              0 0 200px #03e9f4;
-   -webkit-box-reflect:below 1px linear-gradient(transparent, rgba(0, 0, 0, 0.333));
+    background: #ffffff;
+    color: #ffffff;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 200px #03e9f4;
+    -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
 }
 
-button:nth-child(1){
-  filter: hue-rotate(270deg);
+ button:nth-child(1){
+    filter: hue-rotate(270deg);
 }
 
 button:nth-child(2){
-  filter: hue-rotate(110deg);
+    filter: hue-rotate(110deg);
 }
 
 button span{
-  position: absolute;
-  display: block;
-}
+    position: absolute;
+    display: block;
+} 
 
 button span:nth-child(1){
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg,transparent,#03e9f4);
-  animation: animate1 1s linear infinite;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,#03e9f4);
+    animation: animate1 1s linear infinite;
 }
 
 @keyframes animate1{
-  0%{
-      left: -100%;
-  }
-  50%,100%{
-      left: 100%;
-  }
+    0%{
+        left: -100%;
+    }
+    50%,100%{
+        left: 100%;
+    }
 }
 
 button span:nth-child(2){
-  top: -100%;
-  right: 0;
-  width: 2px;
-  height: 100%;
-  background: linear-gradient(180deg,transparent,#03e9f4);
-  animation: animate2 1s linear infinite;
-  animation-delay: 0.25s;
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#03e9f4);
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
 }
 
 @keyframes animate2{
-  0%{
-      top: -100%;
-  }
-  50%,100%{
-      top: 100%;
-  }
+    0%{
+        top: -100%;
+    }
+    50%,100%{
+        top: 100%;
+    }
 }
 
 button span:nth-child(3){
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(270deg,transparent,#03e9f4);
-  animation: animate3 1s linear infinite;
-  animation-delay: 0.50s;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,#03e9f4);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.50s;
 }
 
 @keyframes animate3{
-  0%{
-      right: -100%;
-  }
-  50%,100%{
-      right: 100%;
-  }
+    0%{
+        right: -100%;
+    }
+    50%,100%{
+        right: 100%;
+    }
 }
 
+
 button span:nth-child(4){
-  bottom: -100%;
-  left: 0;
-  width: 2px;
-  height: 100%;
-  background: linear-gradient(360deg,transparent,#03e9f4);
-  animation: animate4 1s linear infinite;
-  animation-delay: 0.75s;
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#03e9f4);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
 }
+
 @keyframes animate4{
-  0%{
-      bottom: -100%;
-  }
-  50%,100%{
-      bottom: 100%;
-  }
+    0%{
+        bottom: -100%;
+    }
+    50%,100%{
+        bottom: 100%;
+    }
 }
