@@ -8,15 +8,10 @@
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 20px;
-  transition: transform 2s;
   box-shadow: 0 0 .5px #ffffff,
                0 0 2.5px #ffffff,
                0 0 5px #ffffff,
                0 0 20px #ffffff;
-}
-
-.jumbotron:hover {
-  transform: matrix(200px);
 }
 
 .result {
@@ -270,7 +265,6 @@ label {
   width: 20%;
   padding: 1.5em;
   color: #03e9f4;
-  text-shadow: 2px 2px red;
   cursor: crosshair;
   text-decoration: none;
   text-align: center;
@@ -367,10 +361,75 @@ body{
     font-weight: bold;
     color:rgb(0, 247, 255);
 }
-button {
+
+.bt {
+  background-color: black;
+  border-radius: 110px;
+  border: none;
+  margin-right: 600px;
+}
+.outer {
+  width: 220px;
+  height: 220px;
+  margin: 10px auto;
+  position:relative;
+  border-radius: 110px;
+  border: solid 1px #2ff1ff;
+  box-shadow: 0 0 3px #0099ff,
+                0 0 15px #00e1ff,
+                0 0 30px #00d9ff,
+                0 0 100px #a9f9fc;
+  background-image: url("../assets/img/orb.png");
+  background-size: cover;
+}
+.mask {
+  position:absolute;
+  top: 55px;
+  width: 220px;
+  height: 110px;
+  overflow: hidden;
+	/* Firefox */
+	-moz-transition: all 0.6s ease;
+	/* WebKit */
+	-webkit-transition: all 0.6s ease;
+	/* Opera */
+	-o-transition: all 0.6s ease;
+	/* Standard */
+	transition: all 0.6s ease;
+}
+.outer:hover .mask {
+transform:rotate(270deg);
+-ms-transform:rotate(270deg); /* IE 9 */
+-webkit-transform:rotate(270deg); 
+height: 220px;
+  top: 0;
+}
+.ring {
+  position: absolute;
+  top:-55px;
+  width: 220px;
+  height: 220px;
+  border: solid 10px #1fffff9d;
+  border-radius: 120px;
+  
+	/* Firefox */
+	-moz-transition: all 0.6s ease;
+	/* WebKit */
+	-webkit-transition: all 0.6s ease;
+	/* Opera */
+	-o-transition: all 0.6s ease;
+	/* Standard */
+	transition: all 0.6s ease;
+}
+
+.outer:hover .ring {
+  top: 0px;
+}
+
+.btn {
     position: relative;
     display: inline-block;
-    padding: 25px 30px;
+    padding: 5px 10px;
     margin: 40px 0;
     cursor: crosshair;
     text-decoration: none;
@@ -381,7 +440,7 @@ button {
     margin-right: 50px;
     
 }
-button:hover{
+.btn:hover{
     background: #ffffff;
     color: #ffffff;
     box-shadow: 0 0 5px #03e9f4,
@@ -391,20 +450,20 @@ button:hover{
     -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
 }
 
- button:nth-child(1){
+ .btn:nth-child(1){
     filter: hue-rotate(270deg);
 }
 
-button:nth-child(2){
+.btn:nth-child(2){
     filter: hue-rotate(110deg);
 }
 
-button span{
+.btn span{
     position: absolute;
     display: block;
 } 
 
-button span:nth-child(1){
+.btn span:nth-child(1){
     top: 0;
     left: 0;
     width: 100%;
@@ -422,7 +481,7 @@ button span:nth-child(1){
     }
 }
 
-button span:nth-child(2){
+.btn span:nth-child(2){
     top: -100%;
     right: 0;
     width: 2px;
@@ -441,7 +500,7 @@ button span:nth-child(2){
     }
 }
 
-button span:nth-child(3){
+.btn span:nth-child(3){
     bottom: 0;
     right: 0;
     width: 100%;
@@ -461,7 +520,7 @@ button span:nth-child(3){
 }
 
 
-button span:nth-child(4){
+.btn span:nth-child(4){
     bottom: -100%;
     left: 0;
     width: 2px;

@@ -1,6 +1,6 @@
 export default class MemeService {
   static getMemeRandom() {
-    return fetch (`https://meme-api.herokuapp.com/gimme/okbuddyretard`)
+    return fetch (`https://meme-api.herokuapp.com/gimme/wholesomememes`)
       .then (function(response) {
         if (!response.ok) {
           throw Error (response.statusText);

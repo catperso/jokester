@@ -132,7 +132,7 @@ function meme() {
       if (memeResponse instanceof Error) {
         throw Error (`Memes API error: ${memeResponse.message}`);
       }
-      const memeJoke = memeResponse.preview[2];
+      const memeJoke = memeResponse.preview[1];
       displayMemeImage(memeJoke);
       console.log("Meme Joke: " + memeJoke);
     })
