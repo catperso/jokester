@@ -246,7 +246,7 @@ button span:nth-child(1){
     height: 2px;
     background: linear-gradient(90deg,transparent,#03e9f4);
     animation: animate1 1s linear infinite;
-}
+} 
 
 @keyframes animate1{
     0%{
