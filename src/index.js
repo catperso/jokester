@@ -8,6 +8,10 @@ import ProgrammingService from "./js/programming-service";
 import SimpsonsService from './js/simpsons-service';
 import MemeService from './js/meme-service';
 import doh from './assets/audio/doh.ogg';
+import zucc from './assets/audio/zucc.ogg';
+import dad from './assets/audio/dad.ogg';
+import ron from './assets/audio/ron.ogg';
+import bruh from './assets/audio/bruh.ogg';
 
 function ronSwan(input) {
   if (input) {
@@ -128,8 +132,8 @@ function meme() {
       if (memeResponse instanceof Error) {
         throw Error (`Memes API error: ${memeResponse.message}`);
       }
-      const memeJoke = memeResponse.data.content;
-      displayJoke(memeJoke);
+      const memeJoke = memeResponse.preview[2];
+      displayMemeImage(memeJoke);
       console.log("Meme Joke: " + memeJoke);
     })
     .catch(function(error) {
@@ -149,54 +153,72 @@ function displayImage(img) {
   $('.simpsonImg').html(`<img src=${img} class='simp'>`);
 }
 
+function displayMemeImage(img) {
+  $('.memeImg').html(`<img src=${img} class='meme'>`);
+}
+
 function clearAllFields() {
   $('input').val('');
   $('.result').text('');
   $('.simpsonImg').html('');
   $('.error').text('');
+  $('.memeImg').html('');
 }
 
 
 $(document).ready(function() {
   let playDoh = new Audio();
   playDoh.src = doh;
+  let playZucc = new Audio();
+  playZucc.src = zucc;
+  let playDad = new Audio();
+  playDad.src = dad;
+  let playRon = new Audio();
+  playRon.src = ron;
+  let playBruh = new Audio();
+  playBruh.src = bruh;
   $('form').submit(function(event) {
     event.preventDefault();
     clearAllFields();
   });
-  $('#officebtn').click(function() {
+  $('#memebtn').click(function() {
     let memeInput = $('#mike').val();
     console.log(memeInput);
     meme(memeInput);
+    playBruh.play();
   });
   $('#probtn').click(function() {
     let progInput = $('#prog').val();
     programming(progInput);
+    playZucc.play();
   });
   $('#probtn2').click(function() {
     programming('');
+    playZucc.play();
   });
   $('#dadbtn').click(function() {
     let dadInput = $('#dad').val();
     dadJoke(dadInput);
+    playDad.play();
   });
   $('#dadbtn2').click(function() {
     dadJoke('');
+    playDad.play();
   });
   $('#ronbtn').click(function() {
     let ronInput = $('#rons').val();
     ronSwan(ronInput);
+    playRon.play();
   });
   $('#ronbtn2').click(function() {
     ronSwan('');
+    playRon.play();
   });
   $('#simpbtn').click(function() {
     simpsons('');
     playDoh.play();
   });
-  $('#tab5').click(function() {
-  });
-  $('#tab2').click(function(){
+  $('label').click(function(){
     clearAllFields();
   });
 });    
