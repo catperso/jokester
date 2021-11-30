@@ -112,9 +112,8 @@ function simpsons () {
 }
 
 
-
 $(document).ready(function() {
   $('#jokeType').click(function() {
-
+    
   });
 });    
