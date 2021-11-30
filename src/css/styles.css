@@ -5,6 +5,15 @@
   padding-top: 30px;
   padding-bottom: 30px;
   background-image: url("/src/assets/img/board.png");
+  border-radius: 20px;
+  box-shadow: 0 0 .5px #ffffff,
+               0 0 2.5px #ffffff,
+               0 0 5px #ffffff,
+               0 0 20px #ffffff;
+}
+
+#bob, #dad, #prog {
+  width: 50%;
 }
 
 #bobbtn, #bobbtn2, #dadbtn, #dadbtn2, #probtn, #probtn2, #simpbtn {
@@ -92,6 +101,10 @@ h3 {
 	margin: 0 auto;
 	padding-top: 70px;
 	position: relative;
+  /* box-shadow: 0 0 5px #ffffff,
+                0 0 25px #ffffff,
+                0 0 50px #ffffff,
+                0 0 200px #ffffff; */
 }
 
 input, section {
@@ -113,6 +126,10 @@ label {
   text-decoration: none;
   text-align: center;
   background: #535353;
+  box-shadow: 0 0 3px #fa3737,
+                0 0 15px #f32323,
+                0 0 30px #0f20bb,
+                0 0 50px #945656;
 }
 
 #tab1:checked ~ #content1,
@@ -129,7 +146,7 @@ label {
 }
 
 .tab_container .tab-content p,
-.tab_container .tab-content h3 {
+.tab_container .tab-content h3, button, input, .jumbotron {
   -webkit-animation: fadeInScale 1s ease-in-out;
   -moz-animation: fadeInScale 1s ease-in-out;
   animation: fadeInScale 1s ease-in-out;
@@ -202,12 +219,12 @@ body{
     font-weight: bold;
     color:rgb(0, 247, 255);
 }
-button{
+button {
     position: relative;
     display: inline-block;
     padding: 25px 30px;
     margin: 40px 0;
-    
+    cursor: crosshair;
     text-decoration: none;
     text-transform: uppercase;
     transition: 1s;
