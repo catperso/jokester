@@ -10,7 +10,7 @@
     </div>
     <div class="tab_container">
 			<input id="tab1" type="radio" name="tabs" checked>
-			<label for="tab1"><i class="fa fa-code"></i><span>Welcome</span></label>
+			<label for="tab1"><i class="fa fa-code"></i><span>Welcome + About</span></label>
 
 			<input id="tab2" type="radio" name="tabs">
 			<label for="tab2"><i class="fa fa-pencil-square-o"></i><span>Bob Ross Quotes</span></label>
@@ -22,18 +22,19 @@
 			<label for="tab4"><i class="fa fa-folder-open-o"></i><span>Coding Jokes</span></label>
 
 			<input id="tab5" type="radio" name="tabs">
-			<label for="tab5"><i class="fa fa-envelope-o"></i><span>About</span></label>
+			<label for="tab5"><i class="fa fa-envelope-o"></i><span>Simpsons Jokes</span></label>
 
 			<section id="content1" class="tab-content">
 				<h3>Welcome:</h3>
 		      	<p>Make joke</p>
+            <h3>About:</h3>
 			</section>
 
 			<section id="content2" class="tab-content">
 				<h3>Bob Ross Quotes:</h3>
         <form id="bobRoss"><input id="bob" type="text" class="form-control" placeholder="Enter Keyword">
-        <button id="bobbtn" type="submit">Search from Keyword</button>
-        <button id="bobbtn2" type="submit">Random Quote</button>
+        <button class="btn" id="bobbtn" type="submit">Search from Keyword</button>
+        <button class="btn" id="bobbtn2" type="submit">Random Quote</button>
         </form>
         <p></p>
 			</section>
@@ -41,8 +42,8 @@
 			<section id="content3" class="tab-content">
 				<h3>Dad Jokes:</h3>
         <form id="dadJoke"><input type="text" id="dad" class= "form-control" placeholder="Enter Keyword">
-        <button id="dadbtn" type="submit">Search from Keyword</button>
-        <button id="dadbtn2" type="submit">Random Quote</button>
+        <button class="btn" id="dadbtn" type="submit">Search from Keyword</button>
+        <button class="btn" id="dadbtn2" type="submit">Random Joke</button>
         </form>
         <p></p>
 			</section>
@@ -50,15 +51,18 @@
 			<section id="content4" class="tab-content">
 				<h3>Programming Jokes:</h3>
         <form><input type="text" id="programming" class= "form-control" placeholder="Enter Keyword">
-        <button id="probtn" type="submit">Search from Keyword</button>
-        <button id="probtn2" type="submit">Random Quote</button>
+        <button class="btn" id="probtn" type="submit">Search from Keyword</button>
+        <button class="btn" id="probtn2" type="submit">Random Joke</button>
         </form>
         <p></p>
 			</section>
 
-			<section id="content5" class="tab-content">
-				<h3>About Us:</h3>
-        <p>A group of Epicodus students, on our quest to complete the fuckery that is team week!</p>
+      <section id="content5" class="tab-content">
+        <h3>Simpsons Jokes:</h3>
+        <form>
+        <button class="btn" id="simpbtn" type="submit">Random Joke</button>
+        </form>
+        <p></p>
 			</section>
 		</div>
   </div>
