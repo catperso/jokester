@@ -6,7 +6,8 @@ import RonSwansonService from "./js/ron-swanson-service.js";
 import DadService from './js/dad-joke-service';
 import ProgrammingService from "./js/programming-service";
 import SimpsonsService from './js/simpsons-service';
-
+import MemeService from './js/meme-service';
+import doh from './assets/audio/doh.ogg';
 
 function ronSwan(input) {
   if (input) {
@@ -106,7 +107,7 @@ function simpsons() {
   SimpsonsService.getSimpsonsRandom()
     .then(function(simpsonsResponse) {
       if (simpsonsResponse instanceof Error) {
-        throw Error (`Simpson quote API error: ${simpsonsResponse.message}`);
+        throw Error (`Simpsons quote API error: ${simpsonsResponse.message}`);
       }
       const simpsonsJoke = simpsonsResponse[0].quote;
       const simpsonsImage = simpsonsResponse[0].image;
@@ -114,6 +115,22 @@ function simpsons() {
       displayImage(simpsonsImage);
       console.log(simpsonsJoke);
       console.log(simpsonsImage);
+    })
+    .catch(function(error) {
+      displayErrors(error.message);
+    });
+}
+
+function meme() {
+  MemeService.getMemeRandom()
+    .then(function(memeResponse) {
+      console.log("Meme Pull: " + memeResponse);
+      if (memeResponse instanceof Error) {
+        throw Error (`Memes API error: ${memeResponse.message}`);
+      }
+      const memeJoke = memeResponse.data.content;
+      displayJoke(memeJoke);
+      console.log("Meme Joke: " + memeJoke);
     })
     .catch(function(error) {
       displayErrors(error.message);
@@ -139,10 +156,18 @@ function clearAllFields() {
   $('.error').text('');
 }
 
+
 $(document).ready(function() {
+  let playDoh = new Audio();
+  playDoh.src = doh;
   $('form').submit(function(event) {
     event.preventDefault();
     clearAllFields();
+  });
+  $('#officebtn').click(function() {
+    let memeInput = $('#mike').val();
+    console.log(memeInput);
+    meme(memeInput);
   });
   $('#probtn').click(function() {
     let progInput = $('#prog').val();
@@ -167,5 +192,13 @@ $(document).ready(function() {
   });
   $('#simpbtn').click(function() {
     simpsons('');
+    playDoh.play();
+  });
+  $('#tab5').click(function() {
+  });
+  $('#tab2').click(function(){
+    clearAllFields();
   });
 });    
+
+

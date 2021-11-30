@@ -8,27 +8,33 @@
     <div class="jumbotron">
       <h1>Jokeaholics Anonymous</h1>
     </div>
+
     <div class="tab_container">
 			<input id="tab1" type="radio" name="tabs" checked>
-			<label for="tab1"><i class="fa fa-code"></i><span>Welcome + About</span></label>
+			<label for="tab1" class="tab1" title="The Office Quotes"><i class="fa fa-code"></i><span></span></label>
 
 			<input id="tab2" type="radio" name="tabs">
-			<label for="tab2"><i class="fa fa-pencil-square-o"></i><span>Swanson Quotes</span></label>
+			<label for="tab2" class="tab2" title="Ron Swanson Quotes"><i class="fa fa-pencil-square-o"></i><span></span></label>
 
 			<input id="tab3" type="radio" name="tabs">
-			<label for="tab3"><i class="fa fa-bar-chart-o"></i><span>Dad Jokes</span></label>
+			<label for="tab3" class="tab3" title="Dad Jokes"><i class="fa fa-bar-chart-o"></i><span></span></label>
 
 			<input id="tab4" type="radio" name="tabs">
-			<label for="tab4"><i class="fa fa-folder-open-o"></i><span>Coding Jokes</span></label>
-
+			<label for="tab4" class="tab4" title="Programming Jokes"><i class="fa fa-folder-open-o"></i><span></span></label>
+       
 			<input id="tab5" type="radio" name="tabs">
-			<label for="tab5"><i class="fa fa-envelope-o"></i><span>Simpsons Quotes</span></label>
+			<label for="tab5" class="tab5" title="Simpsons Quotes"><i class="fa fa-envelope-o"></i><span></span></label>
 
 			<section id="content1" class="tab-content">
-				<h3>Welcome:</h3>
-            <p>Make joke</p>
-            <h3>About:</h3>
-            <p>Now laugh.</p>
+				<h3>Office Quotes:</h3>
+        <form id="mike">
+        <button class="btn" id="officebtn" type="submit">Random Quote
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          </button>
+          </form>
 			</section>
     
 			<section id="content2" class="tab-content">
@@ -48,6 +54,7 @@
         </button>
         </form>
         <p>Enjoy our collection of Ron Swanson quotes!</p>
+        <h5>Quote:</h5>
 			</section>
       
 
@@ -68,6 +75,7 @@
         </button>
         </form>
         <p>Nothing like a good Dad joke!</p>
+        <h5>Joke:</h5>
 			</section>
 
 			<section id="content4" class="tab-content">
@@ -88,6 +96,7 @@
         </button>
         </form>
         <p>Hmm.. Seems perfect for this class!</p>
+        <h5>Joke:</h5>
 			</section>
 
       <section id="content5" class="tab-content">
@@ -101,20 +110,31 @@
         </button>
         </form>
         <p>Gettin a little Simpy</p>
+        <h5>Quote:</h5>
 			</section>
 		</div>
-    <h5>Result:</h5>
-    <div class="result"></div>
-    <div class="simpsonImg"></div>
-    <div class="error"></div>
+    <div class="card1">
+      <div class="card-body">
+        <div class="card-text">
+        <div class="result"></div>
+        <div class="simpsonImg"></div>
+        <div class="error"></div>
+        </div>
+      </div>
+    </div>
     <div class="card">
       <div class="card-body">
         <div class="card-text">
         <h4><a href="http://bitly.com/98K8eH">Created by:</a></h4>
-        Matt, Jeff, Chase <br> Kate, Marisa <br> Isaac      
+        <a href="https://github.com/catperso">Matt C.</a>,
+        <a href="https://github.com/JeffTerrell">Jeff T.</a>,
+        <a href="https://github.com/Chase-Stokes">Chase S.</a><br>
+        <a href="https://github.com/keidsiri">Kate K.</a>,
+        <a href="https://github.com/marisa-edgar">Marisa E.</a><br>
+        <a href="https://github.com/mrunderoad">Isaac O.</a>   
         </div>
       </div>
-    </div>
+    </div>      
     <p>Knock Knock! <a href="https://www.youtube.com/watch?v=ez6Xdf_p7Yg">Whos There?</a></p>
   </div>
 </body>

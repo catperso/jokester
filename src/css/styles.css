@@ -14,13 +14,18 @@
                0 0 20px #ffffff;
 }
 
+.result {
+  color: cornsilk;
+}
+
 .simp {
-  margin-left: 41%;
-  transition: transform 1s;
+  margin-left: 42%;
+  transition: -webkit-transform 2s;
+  cursor: crosshair;
 }
 
 .simp:hover {
-  transform: scale(2);
+  -webkit-transform : rotate(360deg) scale(1.4);
 }
 
 .result, .error {
@@ -33,7 +38,7 @@
   margin-left: 280px;
 }
 
-#ronbtn, #ronbtn2, #dadbtn, #dadbtn2, #probtn, #probtn2, #simpbtn {
+#officebtn, #ronbtn, #ronbtn2, #dadbtn, #dadbtn2, #probtn, #probtn2, #simpbtn {
   color: rgb(0, 195, 255);
   transform: rotate(360deg);
   transition: transform 0.5s;
@@ -47,9 +52,9 @@
   background-color: rgb(0, 195, 255);
 }
 
-
 .card {
-  margin-top: 70px;
+  cursor: crosshair;
+  margin-top: 100px;
   margin-left: 480px;
   margin-right: 510px;
   margin-bottom: 100px;
@@ -60,10 +65,29 @@
   text-align: center;
   transition: 3s;
   width: 350px;
+  box-shadow: 0 0 .5px #ffffff,
+               0 0 2.5px #ffffff,
+               0 0 5px #ffffff,
+               0 0 20px #ffffff;
 } 
 
 .card:hover {
   transform: rotate(3600deg);
+}
+
+.card1 {
+  margin-top: 20px;
+  margin-left: 215px;
+  background-color: black;
+  width: 900px;
+  height: auto;
+  border-radius: 15px;
+  transition: 5s;
+}
+
+.card1:hover {
+  background-color: dimgray;
+  opacity: .4;
 }
 
 p {
@@ -71,11 +95,12 @@ p {
 }
 
 a {
-  color: #03e9f4;
+  color: rgb(3, 3, 3);
 }
 
 a:hover {
-  color: #03e9f4;
+  color: rgb(255, 0, 0);
+  text-shadow: 1px 1px black;
 }
 
 h1 {
@@ -102,16 +127,17 @@ h3 {
 h5 {
   text-align: center;
   margin-top: 20px;
+  margin-bottom: 5px;
   color: gold;
   transition: 0.8s;
   font-size: 40px;
 }
 
 h5:hover {
-  transform: rotateY(360deg)
+  transform: scale(1.4);
 }
 
-#simpbtn {
+#simpbtn, #officebtn {
   margin-left: 41%;
 }
 
@@ -157,10 +183,64 @@ h5:hover {
 	position: relative;
 }
 
+input {
+  text-align: center;
+}
+
 input, section {
   clear: both;
   padding-top: 10px;
   display: none;
+}
+
+.tab1 {
+  background-image: url(/src/assets/img/michael.jpg);
+  background-size: cover;
+  transition: .5s;
+}
+
+.tab1:hover {
+  transform: scale(1.1);
+}
+
+.tab2 {
+  background-image: url(/src/assets/img/ron.jpg);
+  background-size: cover;
+  transition: .5s;
+}
+
+.tab2:hover {
+  transform: scale(1.1);
+}
+
+.tab3 {
+  background-image: url(/src/assets/img/dad.jpg);
+  background-size: cover;
+  transition: .5s;
+}
+
+.tab3:hover {
+  transform: scale(1.1);
+}
+
+.tab4 {
+  background-image: url(/src/assets/img/zucc.jpg);
+  background-size: cover;
+  transition: .5s;
+}
+
+.tab4:hover {
+  transform: scale(1.1);
+}
+
+.tab5 {
+  background-image: url(/src/assets/img/simps.jpg);
+  background-size: cover;
+  transition: .5s;
+}
+
+.tab5:hover {
+  transform: scale(1.1);
 }
 
 label {
@@ -175,7 +255,6 @@ label {
   cursor: crosshair;
   text-decoration: none;
   text-align: center;
-  background: #535353;
   box-shadow: 0 0 3px #fa3737,
                 0 0 15px #f32323,
                 0 0 30px #0f20bb,
@@ -203,11 +282,12 @@ label {
 }
 .tab_container .tab-content h3  {
   text-align: center;
+  transition: 0.8s;
 }
 
 .tab_container [id^="tab"]:checked + label {
-  background: #FB94DC;
-  box-shadow: inset 0 4px rgb(0, 247, 255);
+  /*background: #FB94DC;*/
+  box-shadow: inset 3px 3px 3px 3px rgb(0, 247, 255);
 }
 
 .tab_container [id^="tab"]:checked + label .fa {
