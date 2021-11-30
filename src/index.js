@@ -2,7 +2,7 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
-import RonSwansonService from "./js/bob-ross-service.js";
+import RonSwansonService from "./js/ron-swanson-service.js";
 import DadService from './js/dad-joke-service';
 import ProgrammingService from "./js/programming-service";
 import SimpsonsService from './js/simpsons-service';
@@ -109,30 +109,34 @@ function simpsons() {
         throw Error (`Simpson quote API error: ${simpsonsResponse.message}`);
       }
       const simpsonsJoke = simpsonsResponse[0].quote;
-      const simpsonsImage = simpsonsResponse.image;
+      const simpsonsImage = simpsonsResponse[0].image;
       displayJoke(simpsonsJoke);
       displayImage(simpsonsImage);
       console.log(simpsonsJoke);
+      console.log(simpsonsImage);
     })
     .catch(function(error) {
       displayErrors(error.message);
     });
 }
 
-function displayJoke() {
-
+function displayJoke(joke) {
+  $('.result').text(joke);
 }
 
 function displayErrors() {
 
 }
 
-function displayImage() {
-
+function displayImage(img) {
+  $('.simpsonImg').html(`<img src=${img} class='simp'>`);
 }
 
 function clearAllFields() {
   $('input').val('');
+  $('.result').text('');
+  $('.simpsonImg').html('');
+  $('.error').text('');
 }
 
 $(document).ready(function() {
