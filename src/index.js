@@ -5,7 +5,6 @@ import './css/styles.css';
 import BobRossService from "./js/exchangerate.js";
 import DadService from './js/dad-joke-service';
 import ProgrammingService from "./js/programming-service";
-import { assertThisExpression } from '@babel/types';
 
 
 function bobRoss(input) {
@@ -87,7 +86,7 @@ function dadJoke(input) {
       if (dadResponse instanceof Error) {
         throw Error(`Dad Joke API error: ${dadResponse.message}`);
       }
-      const dadJoke = dadResponse.joke;
+      const dadJoke = dadResponse.results.joke;
       displayJoke(dadJoke);
     })
     .catch(function(error) {
@@ -96,13 +95,26 @@ function dadJoke(input) {
   }
 }
 
+function simpsons () {
+  SimpsonsService.getSimpsonsRandom()
+  .then(function(simpsonsResponse) {
+    if (simpsonsResponse instanceof Error) {
+      throw Error (`Simpson quote API erre : ${simpsonsResponse.message}`);
+    }
+    const simpsonsJoke = simpsonsResponse.quote;
+    const simpsonsImage = simpsonsResponse.image;
+    displayJoke(simpsonsJoke);
+    displayImage(simpsonsImage);
+  })
+  .catch(function(error) {
+    displayErrors(error.message);
+  });
+}
+
 
 
 $(document).ready(function() {
   $('#jokeType').click(function() {
-
-
-
 
   });
 });    
