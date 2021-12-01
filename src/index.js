@@ -22,7 +22,7 @@ function ronSwan(input) {
           throw Error(`Ron Swanson API error: ${ronResponse.message}`);
         }
         let randomRon = ronResponse.length - 1;
-        let ronChoice = Math.floor(Math.random() * randomRon); /*random number between 0 and randomBob */ 
+        let ronChoice = Math.floor(Math.random() * randomRon);
         const theJoke = ronResponse[ronChoice];
         displayJoke(theJoke);
       })
@@ -140,7 +140,6 @@ function randomFact() {
       }
       const randomFact = randomFactResponse.text;
       displayRandomFact(randomFact);
-      console.log("Random Fact: " + randomFact);
     })
     .catch(function(error) {
       displayErrors(error.message);
@@ -155,8 +154,8 @@ function displayRandomFact(fact) {
   $('.randomFact').text(fact);
 }
 
-function displayErrors() {
-
+function displayErrors(error) {
+  $('.error').text(error);
 }
 
 function displaySimpsonsImage(img) {
@@ -173,8 +172,8 @@ function clearAllFields() {
   $('.simpsonImg').html('');
   $('.error').text('');
   $('.memeImg').html('');
+  $('.randomFact').text('');
 }
-
 
 $(document).ready(function() {
   let playDoh = new Audio();
@@ -228,10 +227,52 @@ $(document).ready(function() {
     playDoh.play();
   });
   $('#factbtn').click(function() {
+    clearAllFields();
     randomFact('');
+    $('.bubble').show();
   });
   $('label').click(function(){
     clearAllFields();
+  });
+  $('#page-2').click(function(){
+    $('.pg-2').hide();
+    $('.pg-1').show();
+    $('body').addClass('interior');
+  });
+  $('.beer').click(function(){
+    $('#shotsbtn').hide();
+    $('#winebtn').hide();
+    $('#martinibtn').hide();
+    $('#beerbtn').show();
+    $('#sodabtn').hide();
+  });
+  $('.martini').click(function(){
+    $('#shotsbtn').hide();
+    $('#winebtn').hide();
+    $('#martinibtn').show();
+    $('#beerbtn').hide();
+    $('#sodabtn').hide();
+  });
+  $('.wine').click(function(){
+    $('#shotsbtn').hide();
+    $('#winebtn').show();
+    $('#martinibtn').hide();
+    $('#beerbtn').hide();
+    $('#sodabtn').hide();
+  });
+  $('.soda').click(function(){
+    $('#shotsbtn').hide();
+    $('#winebtn').hide();
+    $('#martinibtn').hide();
+    $('#beerbtn').hide();
+    $('#sodabtn').show();
+  });
+  $('.shots').click(function(){
+    $('#shotsbtn').show();
+    $('#winebtn').hide();
+    $('#martinibtn').hide();
+    $('#beerbtn').hide();
+    $('#sodabtn').hide();
   });
 });    
 
