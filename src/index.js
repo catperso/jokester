@@ -7,6 +7,7 @@ import DadService from './js/dad-joke-service';
 import ProgrammingService from "./js/programming-service";
 import SimpsonsService from './js/simpsons-service';
 import MemeService from './js/meme-service';
+import RandomFactService from './js/random-fact-service';
 import doh from './assets/audio/doh.ogg';
 import zucc from './assets/audio/zucc.ogg';
 import dad from './assets/audio/dad.ogg';
@@ -24,7 +25,6 @@ function ronSwan(input) {
         let ronChoice = Math.floor(Math.random() * randomRon); /*random number between 0 and randomBob */ 
         const theJoke = ronResponse[ronChoice];
         displayJoke(theJoke);
-        console.log(theJoke);
       })
       .catch(function(error) {
         displayErrors(error.message);
@@ -37,7 +37,6 @@ function ronSwan(input) {
         }
         const theJoke = ronResponse[0];
         displayJoke(theJoke);
-        console.log(theJoke);
       })
       .catch(function(error) {
         displayErrors(error.message);
@@ -54,7 +53,6 @@ function programming(input) {
         }
         const programmingJoke = programmingResponse.joke;
         displayJoke(programmingJoke);
-        console.log(programmingJoke);
       })
       .catch(function(error) {
         displayErrors(error.message);
@@ -67,7 +65,6 @@ function programming(input) {
         }
         const programmingJoke = programmingResponse.joke;
         displayJoke(programmingJoke);
-        console.log(programmingJoke);
       })
       .catch(function(error) {
         displayErrors(error.message);
@@ -86,7 +83,6 @@ function dadJoke(input) {
         let dadChoice = Math.floor(Math.random() * randomDad);
         const dadJoke = dadResponse.results[dadChoice].joke;
         displayJoke(dadJoke);
-        console.log(dadJoke);
       })
       .catch(function(error) {
         displayErrors(error.message);
@@ -99,7 +95,6 @@ function dadJoke(input) {
         }
         const dadJoke = dadResponse.joke;
         displayJoke(dadJoke);
-        console.log(dadJoke);
       })
       .catch(function(error) {
         displayErrors(error.message);
@@ -116,9 +111,7 @@ function simpsons() {
       const simpsonsJoke = simpsonsResponse[0].quote;
       const simpsonsImage = simpsonsResponse[0].image;
       displayJoke(simpsonsJoke);
-      displayImage(simpsonsImage);
-      console.log(simpsonsJoke);
-      console.log(simpsonsImage);
+      displaySimpsonsImage(simpsonsImage);
     })
     .catch(function(error) {
       displayErrors(error.message);
@@ -128,13 +121,26 @@ function simpsons() {
 function meme() {
   MemeService.getMemeRandom()
     .then(function(memeResponse) {
-      console.log("Meme Pull: " + memeResponse);
       if (memeResponse instanceof Error) {
         throw Error (`Memes API error: ${memeResponse.message}`);
       }
       const memeJoke = memeResponse.preview[1];
       displayMemeImage(memeJoke);
-      console.log("Meme Joke: " + memeJoke);
+    })
+    .catch(function(error) {
+      displayErrors(error.message);
+    });
+}
+
+function randomFact() {
+  RandomFactService.getRandomFact()
+    .then(function(randomFactResponse) {
+      if (randomFactResponse instanceof Error) {
+        throw Error (`Random Fact API error: ${randomFactResponse.message}`);
+      }
+      const randomFact = randomFactResponse.text;
+      displayRandomFact(randomFact);
+      console.log("Random Fact: " + randomFact);
     })
     .catch(function(error) {
       displayErrors(error.message);
@@ -145,11 +151,15 @@ function displayJoke(joke) {
   $('.result').text(joke);
 }
 
+function displayRandomFact(fact) {
+  $('.randomFact').text(fact);
+}
+
 function displayErrors() {
 
 }
 
-function displayImage(img) {
+function displaySimpsonsImage(img) {
   $('.simpsonImg').html(`<img src=${img} class='simp'>`);
 }
 
@@ -182,8 +192,7 @@ $(document).ready(function() {
     clearAllFields();
   });
   $('#memebtn').click(function() {
-    let memeInput = $('#mike').val();
-    console.log(memeInput);
+    let memeInput = $('#meme').val();
     meme(memeInput);
     playBruh.play();
   });
@@ -217,6 +226,9 @@ $(document).ready(function() {
   $('#simpbtn').click(function() {
     simpsons('');
     playDoh.play();
+  });
+  $('#fact').click(function() {
+    randomFact('');
   });
   $('label').click(function(){
     clearAllFields();
