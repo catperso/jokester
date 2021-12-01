@@ -144,6 +144,10 @@ h5 {
   font-size: 40px;
 }
 
+.randomFact {
+  text-align: center;
+}
+
 h5:hover {
   transform: scale(1.4);
 }

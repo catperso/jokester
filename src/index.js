@@ -227,7 +227,7 @@ $(document).ready(function() {
     simpsons('');
     playDoh.play();
   });
-  $('#fact').click(function() {
+  $('#factbtn').click(function() {
     randomFact('');
   });
   $('label').click(function(){
