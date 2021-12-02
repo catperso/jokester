@@ -32,6 +32,7 @@ _A web application of digital comedy club with 5 different kinds of jokes such a
 * _Run 'npm install' from the terminal in the project directory to set up the node package environment._
 * _Run 'npm run start' from the terminal to build the project and start a live server to view the application._
 * _Enjoy the orb._
+* _OR enjoy it live [here](https://catperso.github.io/jokester/)!_
 
 ## Known Bugs
 
