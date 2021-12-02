@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="icon" href='3acbdde9b53927506304.ico'>
+  <title>Jokester</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="pg-1">
+      <div class="jumbotron">
+        <h1 class="glow">Jokeaholics Comedy Club</h1>
+      </div>
+
+      <div class="tab_container">
+        <input id="tab1" type="radio" name="tabs" checked>
+        <label for="tab1" class="tab1" title="Memes"><i class="fa fa-code"></i><span></span></label>
+        <input id="tab2" type="radio" name="tabs">
+        <label for="tab2" class="tab2" title="Ron Swanson Quotes"><i class="fa fa-pencil-square-o"></i><span></span></label>
+        <input id="tab3" type="radio" name="tabs">
+        <label for="tab3" class="tab3" title="Dad Jokes"><i class="fa fa-bar-chart-o"></i><span></span></label>
+        <input id="tab4" type="radio" name="tabs">
+        <label for="tab4" class="tab4" title="Programming Jokes"><i class="fa fa-folder-open-o"></i><span></span></label>
+        <input id="tab5" type="radio" name="tabs">
+        <label for="tab5" class="tab5" title="Simpsons Quotes"><i class="fa fa-envelope-o"></i><span></span></label>
+
+        <section id="content1" class="tab-content">
+          <h3>Memes:</h3>
+          <form id="meme">
+            <button class="bt" id="memebtn" type="submit">
+              <div class="outer">
+                <div class="mask">
+                  <div class="ring"></div>
+                </div>
+              </div>
+            </button>
+          </form>
+          <p>Go ahead... Ponder that orb!</p>
+        </section>
+
+        <section id="content2" class="tab-content">
+          <h3>Ron Swanson Quotes:</h3>
+          <form id="ron"><input id="rons" type="text" class="form-control" placeholder="Enter Keyword">
+            <button class="btn" id="ronbtn" type="submit">Search from Keyword
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <button class="btn" id="ronbtn2" type="submit">Random Quote
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </form>
+          <p>Enjoy our collection of Ron Swanson quotes!</p>
+          <h5>Quote:</h5>
+        </section>
+
+        <section id="content3" class="tab-content">
+          <h3>Dad Jokes:</h3>
+          <form id="dadJoke"><input type="text" id="dad" class="form-control" placeholder="Enter Keyword">
+            <button class="btn" id="dadbtn" type="submit">Search from Keyword
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <button class="btn" id="dadbtn2" type="submit">Random Joke
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </form>
+          <p>Nothing like a good Dad joke!</p>
+          <h5>Joke:</h5>
+        </section>
+
+        <section id="content4" class="tab-content">
+          <h3>Programming Jokes:</h3>
+          <form id="progJoke">
+            <input type="text" id="prog" class="form-control" placeholder="Enter Keyword">
+            <button class="btn" id="probtn" type="submit">Search from Keyword
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <button class="btn" id="probtn2" type="submit">Random Joke
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </form>
+          <p>Hmm.. Seems perfect for this class!</p>
+          <h5>Joke:</h5>
+        </section>
+
+        <section id="content5" class="tab-content">
+          <h3>Simpsons Quotes:</h3>
+          <form id="simpJoke">
+            <button class="but" id="simpbtn" type="submit">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </form>
+          <p>Gettin a little Simpy!</p>
+          <h5>Quote:</h5>
+        </section>
+      </div>
+      <div class="card1">
+        <div class="card-body">
+          <div class="card-text">
+            <div class="result"></div>
+            <div class="memeImg"></div>
+            <div class="simpsonImg"></div>
+            <div class="error"></div>
+          </div>
+        </div>
+      </div>
+      <div class="bubble">
+        <p><u>Phone Fact</u></p>
+        <div class="randomFact"></div>
+      </div>
+      <div class="lounge">
+        <div class="table">
+          <button id="factbtn" class="phone"></button>
+          <div class="dropdown" id="martini-drop">
+            <button id="martinibtn" class="martini dropdownbtn"></button>
+            <div class="dropdown-content">
+              <a id="beer" class="beer" value="beer">Beer $4</a><br>
+              <a id="wine" class="wine" value="wine">Wine $7</a><br>
+              <a id="soda" class="soda" value="soda">Soda $2.50</a><br>
+              <a id="shots" class="shots" value="shots">SHOTS!! $7</a>
+            </div>
+          </div>
+          <div class="dropdown" id="beer-drop">
+            <button id="beerbtn" class="beer dropdownbtn"></button>
+            <div class="dropdown-content">
+              <a id="martini" class="martini" value="martini">Martini $8</a><br>
+              <a id="wine" class="wine" value="wine">Wine $7</a><br>
+              <a id="soda" class="soda" value="soda">Soda $2.50</a><br>
+              <a id="shots" class="shots" value="shots">SHOTS!! $7</a>
+            </div>
+          </div>
+          <div class="dropdown" id="wine-drop">
+            <button id="winebtn" class="wine dropdownbtn"></button>
+            <div class="dropdown-content">
+              <a id="martini" class="martini" value="martini">Martini $8</a><br>
+              <a id="beer" class="beer" value="beer">Beer $4</a><br>
+              <a id="soda" class="soda" value="soda">Soda $2.50</a><br>
+              <a id="shots" class="shots" value="shots">SHOTS!! $7</a>
+            </div>
+          </div>
+          <div class="dropdown" id="soda-drop">
+            <button id="sodabtn" class="soda dropdownbtn"></button>
+            <div class="dropdown-content">
+              <a id="martini" class="martini" value="martini">Martini $8</a><br>
+              <a id="wine" class="wine" value="wine">Wine $7</a><br>
+              <a id="beer" class="beer" value="beer">Beer $4</a><br>
+              <a id="shots" class="shots" value="shots">SHOTS!! $7</a>
+            </div>
+          </div>
+          <div class="dropdown" id="shot-drop">
+            <button id="shotsbtn" class="shots dropdownbtn"></button>
+            <div class="dropdown-content">
+              <a id="martini" class="martini" value="martini">Martini $8</a><br>
+              <a id="wine" class="wine" value="wine">Wine $7</a><br>
+              <a id="beer" class="beer" value="beer">Beer $4</a><br>
+              <a id="soda" class="soda" value="soda">Soda $2.50</a>
+            </div>
+          </div>
+          <div class="card3">     
+            <h2><strong><u>Bar Tab:</u><br>$<span class="reciept">0.00</span></strong></h2>             
+            <div class="barTab"></div>  
+          </div>
+        </div>      
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <div class="card-text">
+            <h4><a href="http://bitly.com/98K8eH">Created by:</a></h4>
+            <a href="https://github.com/catperso">Matt C.</a>,
+            <a href="https://github.com/JeffTerrell">Jeff T.</a>,
+            <a href="https://github.com/Chase-Stokes">Chase S.</a><br>
+            <a href="https://github.com/keidsiri">Kate K.</a>,
+            <a href="https://github.com/marisa-edgar">Marisa E.</a><br>
+            <a href="https://github.com/mrunderoad">Isaac O.</a>
+          </div>
+        </div>
+      </div>
+      <p>Knock Knock! <a id="there" href="https://www.youtube.com/watch?v=ez6Xdf_p7Yg">Who's There?</a></p>
+    </div>
+
+    <div class="pg-2">
+      <div id="card2" class="card2">
+        <div class="card-body">
+          <h6 class="glow">Entrance</h6>
+          <img id="sign" src="assets/img/91e18314aa3825710e94.png">
+          <img id="jerry" src="assets/img/9d2db4d215b072b734b1.png">
+          <button id="page-2" class="doorimg"></button>         
+        </div>
+      </div>
+    </div>
+  </div>
+<script defer src="bundle.js"></script></body>
+</html>
