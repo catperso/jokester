@@ -1,8 +1,8 @@
-# _Team Week Project_
+# _Jokeaholics Comedy Club_
 
 #### By _**Matt C., Kate K., Isaac O., Marisa E., Jeff T., Chase S.**_
 
-#### _Jokeaholics Comedy Club_
+#### _Team Week Project_
 
 ## Technologies Used
 

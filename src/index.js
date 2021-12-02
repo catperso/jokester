@@ -15,6 +15,7 @@ import ron from './assets/audio/ron.ogg';
 import bruh from './assets/audio/bruh.ogg';
 import bzz from './assets/audio/bzzbzz.ogg';
 import chching from './assets/audio/chching.ogg';
+import eric from './assets/audio/eric.ogg';
 
 function ronSwan(input) {
   if (input) {
@@ -197,6 +198,8 @@ $(document).ready(function() {
   playBuzz.src = bzz;
   let playCash = new Audio();
   playCash.src = chching;
+  let playEric = new Audio();
+  playEric.src = eric;
   let barTab = 0;
   
   $('form').submit(function(event) {
@@ -249,6 +252,7 @@ $(document).ready(function() {
     clearAllFields();
   });
   $('#page-2').click(function(){
+    playEric.play();
     $('.pg-2').hide();
     $('.pg-1').show();
     $('body').addClass('interior');
@@ -305,8 +309,11 @@ $(document).ready(function() {
   });
   $('.card3').click( () => {
     playCash.play();
-    $('.reciept').html('');
+    barTab = 0;
+    $('.reciept').html('0.00');
   });
-});    
+});
+
+
 
 
