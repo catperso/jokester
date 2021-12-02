@@ -22,11 +22,11 @@
 
 ## Description
 
-_A digtal comedy club with options for what kind of joke youd like to hear and the ablity to choose your favorite drink._
+_A digtal comedy club with options for what kind of joke you'd like to hear and the ablity to choose your favorite drink._
 
 ## Setup/Installation Requirements
 
-* _Run 'git clone git@github:catperso/ride-compare.git' from the terminal to clone the project directory to your device._
+* _Run 'git clone https://github.com/catperso/jokester' from the terminal to clone the project directory to your device._
 * _Run 'npm install' from the terminal in the project directory to set up the node package environment._
 * _Run 'npm run start' from the terminal to build the project and start a live server._
 * _Enjoy the orb._
