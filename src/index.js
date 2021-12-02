@@ -146,6 +146,23 @@ function randomFact() {
     });
 }
 
+// function barTab() {
+//   const drink = $(".dropdown").val();
+//   let total = 0;
+//   if (drink === "beer") {
+//     total += 4;
+//   } else if (drink === "martini") {
+//     total += 8;
+//   } else if (drink === "wine") {
+//     total += 7;
+//   } else if (drink === "soda") {
+//     total += 3; 
+//   } else {
+//     total += 7;
+//   }
+//   $('.reciept').html(total);
+// }
+
 function displayJoke(joke) {
   $('.result').text(joke);
 }
@@ -173,6 +190,11 @@ function clearAllFields() {
   $('.error').text('');
   $('.memeImg').html('');
   $('.randomFact').text('');
+  $('.bubble').hide();
+}
+
+function displayTotal(barTab) {
+  $('.reciept').html(barTab);
 }
 
 $(document).ready(function() {
@@ -186,6 +208,8 @@ $(document).ready(function() {
   playRon.src = ron;
   let playBruh = new Audio();
   playBruh.src = bruh;
+  let barTab = 0;
+  
   $('form').submit(function(event) {
     event.preventDefault();
     clearAllFields();
@@ -245,6 +269,8 @@ $(document).ready(function() {
     $('#martinibtn').hide();
     $('#beerbtn').show();
     $('#sodabtn').hide();
+    barTab += 4;
+    displayTotal(barTab);
   });
   $('.martini').click(function(){
     $('#shotsbtn').hide();
@@ -252,6 +278,8 @@ $(document).ready(function() {
     $('#martinibtn').show();
     $('#beerbtn').hide();
     $('#sodabtn').hide();
+    barTab += 8;
+    displayTotal(barTab);
   });
   $('.wine').click(function(){
     $('#shotsbtn').hide();
@@ -259,6 +287,8 @@ $(document).ready(function() {
     $('#martinibtn').hide();
     $('#beerbtn').hide();
     $('#sodabtn').hide();
+    barTab += 7;
+    displayTotal(barTab);
   });
   $('.soda').click(function(){
     $('#shotsbtn').hide();
@@ -266,6 +296,8 @@ $(document).ready(function() {
     $('#martinibtn').hide();
     $('#beerbtn').hide();
     $('#sodabtn').show();
+    barTab += 3;
+    displayTotal(barTab);
   });
   $('.shots').click(function(){
     $('#shotsbtn').show();
@@ -273,6 +305,8 @@ $(document).ready(function() {
     $('#martinibtn').hide();
     $('#beerbtn').hide();
     $('#sodabtn').hide();
+    barTab += 7;
+    displayTotal(barTab);
   });
 });    
 
