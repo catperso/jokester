@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
 
 .jumbotron {
+  height: 100px;
   margin-top: 25px;
   padding-top: 30px;
   padding-bottom: 30px;
@@ -124,6 +125,7 @@ h1 {
   font-size: 50px;
   text-shadow: 3px 3px rgb(124, 122, 122);
   cursor: crosshair;
+  margin-bottom: 10%;
 }
 
 h1:hover {
@@ -570,7 +572,7 @@ height: 160px;
 }
 
 .bubble {
-  background-image: url("../assets/img/thots.png");
+  background-image: url("../assets/img/thots2.png");
   background-size: 75%;
   background-repeat: no-repeat;
   width: 350px;
@@ -604,13 +606,12 @@ height: 160px;
   width: 190px;
   height: 98px;
   margin-left: 8%;
-  /* margin-bottom: 5%; */
-  transition: 1s;
+  /* transition: 1s; */
 }
 
-.randomFact:hover {
+/* .randomFact:hover {
   transform: scale(1.2);
-}
+} */
 
 .phone {
   background-image: url("../assets/img/phone.png");
@@ -716,10 +717,10 @@ height: 160px;
   /* overflow: hidden; */
   border: none;
   outline: none;
-  float: right;
+  float: left;
   width: 50px;
   height: 60px;
-  margin-right: 3%;
+  margin-left: 3%;
   margin-top: -4%;
 }
 
@@ -858,4 +859,6 @@ h2 {
 .reciept {
   float: center;
 }
+
+
 

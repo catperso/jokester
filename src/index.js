@@ -13,6 +13,8 @@ import zucc from './assets/audio/zucc.ogg';
 import dad from './assets/audio/dad.ogg';
 import ron from './assets/audio/ron.ogg';
 import bruh from './assets/audio/bruh.ogg';
+import bzz from './assets/audio/bzzbzz.ogg';
+import chching from './assets/audio/chching.ogg';
 
 function ronSwan(input) {
   if (input) {
@@ -146,23 +148,6 @@ function randomFact() {
     });
 }
 
-// function barTab() {
-//   const drink = $(".dropdown").val();
-//   let total = 0;
-//   if (drink === "beer") {
-//     total += 4;
-//   } else if (drink === "martini") {
-//     total += 8;
-//   } else if (drink === "wine") {
-//     total += 7;
-//   } else if (drink === "soda") {
-//     total += 3; 
-//   } else {
-//     total += 7;
-//   }
-//   $('.reciept').html(total);
-// }
-
 function displayJoke(joke) {
   $('.result').text(joke);
 }
@@ -208,6 +193,10 @@ $(document).ready(function() {
   playRon.src = ron;
   let playBruh = new Audio();
   playBruh.src = bruh;
+  let playBuzz = new Audio();
+  playBuzz.src = bzz;
+  let playCash = new Audio();
+  playCash.src = chching;
   let barTab = 0;
   
   $('form').submit(function(event) {
@@ -254,6 +243,7 @@ $(document).ready(function() {
     clearAllFields();
     randomFact('');
     $('.bubble').show();
+    playBuzz.play();
   });
   $('label').click(function(){
     clearAllFields();
@@ -264,6 +254,7 @@ $(document).ready(function() {
     $('body').addClass('interior');
   });
   $('.beer').click(function(){
+    $('.bubble').hide();
     $('#shotsbtn').hide();
     $('#winebtn').hide();
     $('#martinibtn').hide();
@@ -273,6 +264,7 @@ $(document).ready(function() {
     displayTotal(barTab);
   });
   $('.martini').click(function(){
+    $('.bubble').hide();
     $('#shotsbtn').hide();
     $('#winebtn').hide();
     $('#martinibtn').show();
@@ -282,6 +274,7 @@ $(document).ready(function() {
     displayTotal(barTab);
   });
   $('.wine').click(function(){
+    $('.bubble').hide();
     $('#shotsbtn').hide();
     $('#winebtn').show();
     $('#martinibtn').hide();
@@ -291,6 +284,7 @@ $(document).ready(function() {
     displayTotal(barTab);
   });
   $('.soda').click(function(){
+    $('.bubble').hide();
     $('#shotsbtn').hide();
     $('#winebtn').hide();
     $('#martinibtn').hide();
@@ -300,6 +294,7 @@ $(document).ready(function() {
     displayTotal(barTab);
   });
   $('.shots').click(function(){
+    $('.bubble').hide();
     $('#shotsbtn').show();
     $('#winebtn').hide();
     $('#martinibtn').hide();
@@ -307,6 +302,9 @@ $(document).ready(function() {
     $('#sodabtn').hide();
     barTab += 7;
     displayTotal(barTab);
+  });
+  $('.card3').click( () => {
+    playCash.play();
   });
 });    
 
