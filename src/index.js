@@ -305,6 +305,7 @@ $(document).ready(function() {
   });
   $('.card3').click( () => {
     playCash.play();
+    $('.reciept').html('');
   });
 });    
 
