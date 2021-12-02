@@ -13,6 +13,7 @@
 * _Bootstrap_
 * _jQuery_
 * _webpack_
+* _npm_
 * _[The Simpsons Quote API](https://thesimpsonsquoteapi.glitch.me/)_
 * _[I Can Haz Dad Joke API](https://icanhazdadjoke.com/api)_
 * _[JokeAPI](https://sv443.net/jokeapi/v2/)_
@@ -22,7 +23,7 @@
 
 ## Description
 
-_A web application of digital comedy club with 5 different kind of joke such as Dad jokes, Programming jokes, Memes , Ron Swanson quotes and Simpson quotes. All of them users can get the random jokes, for Ron Swanson , Dad jokes and programming jokes users have more oprtion that can enter the keyword the application will generate the joke that related with keyword. Users also can click on the phone to see a random fun fact and be able to choose their favourite drinks. The bar tap will calculate the total cost of the drinks that users have when they click._
+_A web application of digital comedy club with 5 different kinds of jokes such as Dad jokes, Programming jokes, Memes, Ron Swanson quotes and Simpson quotes. All joke types can get random jokes, and a few of them let you search for jokes/quotes with a keyword. Users also can click on the phone to see a random fun fact and be able to choose their favourite drinks. The bar tab will calculate the total cost of the drinks that users have when they click, and by clicking on the receipt you can cash out._
 
 ## Setup/Installation Requirements
 
