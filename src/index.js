@@ -313,7 +313,3 @@ $(document).ready(function() {
     $('.reciept').html('0.00');
   });
 });
-
-
-
-
