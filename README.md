@@ -37,6 +37,6 @@ _A digtal comedy club with options for what kind of joke youd like to hear and t
 
 ## License - [MIT](https://opensource.org/licenses/MIT)
 
-_If you run into any problems/bugs feel free to send us an email @mc.casperson@gmail.com,marisaedgar1212@gmail.com, chasehstokes@gmail.com, keidsiri@gmail.com, jeffaterrell@gmail.com, or isaacoverstreet3@gmail.com with details._
+_If you run into any problems/bugs feel free to send us an email mc.casperson@gmail.com, marisaedgar1212@gmail.com, chasehstokes@gmail.com, keidsiri@gmail.com, jeffaterrell@gmail.com, or isaacoverstreet3@gmail.com with details._
 
 Copyright (c) _2021_ _Matt C._ _Jeff T._ _Kate K._ _Marisa E._ _Chase S._ _Isaac O._

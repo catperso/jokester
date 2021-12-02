@@ -194,7 +194,7 @@ function clearAllFields() {
 }
 
 function displayTotal(barTab) {
-  $('.reciept').html(barTab);
+  $('.reciept').html(barTab.toFixed(2));
 }
 
 $(document).ready(function() {
@@ -296,7 +296,7 @@ $(document).ready(function() {
     $('#martinibtn').hide();
     $('#beerbtn').hide();
     $('#sodabtn').show();
-    barTab += 3;
+    barTab += 2.50;
     displayTotal(barTab);
   });
   $('.shots').click(function(){
